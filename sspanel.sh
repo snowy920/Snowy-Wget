@@ -1,7 +1,7 @@
 echo 欢迎使用ss-panel-v3-mod一键安装脚本
 echo 使用前请确保已安装好生产环境
 stty erase '^H' && read -p "(请输入网站目录最后一项):" mulu
-cd /www/wwwroot/"${mulu}"
+cd /www/wwwroot/${mulu}
 yum install git -y
 git clone -b master https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 chown -R root:root *
